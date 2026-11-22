@@ -57,7 +57,8 @@ class ObdClientTest {
         val info = client.connect()
         assertEquals(ObdProtocol.CAN_11_500, info.protocol)
         assertEquals(listOf("7E8"), info.ecus)
-        assertEquals("ELM327 v1.5", info.elmVersion)
+        // ElmDevice restituisce le righe in maiuscolo
+        assertEquals("ELM327 V1.5", info.elmVersion)
 
         val supported = client.supportedPids()
         assertTrue(0x0C in supported)
