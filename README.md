@@ -50,8 +50,8 @@ app/        Android (Kotlin + Jetpack Compose)
 
 1. Installa **Android Studio** (include JDK e SDK).
 2. *File → Open* → cartella `obd-facile`.
-   Manca il `gradle-wrapper.jar`: Android Studio lo propone da solo, oppure da terminale con Gradle installato: `gradle wrapper`.
 3. Test del core (girano su PC, senza auto): `./gradlew :obd-core:test`
+   APK di debug da terminale: `./gradlew assembleDebug` (serve `local.properties` con `sdk.dir=...`, Android Studio lo crea da solo).
 4. Avvia l'app su un telefono vero (l'emulatore non ha il Bluetooth).
 
 ## Prossimi passi

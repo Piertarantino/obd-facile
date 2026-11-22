@@ -17,6 +17,5 @@ Lingua del progetto: **italiano** (UI, commenti, documentazione).
 - Il dialogo con l'ELM327 passa sempre da `ElmDevice` (un comando alla volta, mai interrotto a metà).
 
 ## Stato (22/11/2026)
-- v0.1 scritta ma **mai compilata**: sul portatile iniziale mancavano JDK/SDK. Primo passo sul PC fisso: aprire in Android Studio, sistemare eventuali errori di compilazione, far girare i test di obd-core.
-- Manca `gradle/wrapper/gradle-wrapper.jar` (lo rigenera Android Studio o `gradle wrapper`).
+- v0.1 compila: `./gradlew :obd-core:test` passa (12 test) e `./gradlew assembleDebug` produce l'APK (Gradle 8.11.1, AGP 8.7.3, compileSdk 35). Non ancora provata su un'auto vera.
 - Prossimi passi: vedi "Prossimi passi" nel README (foreground service, USB, freeze frame, DB DTC completo, multi-PID, funzioni per marca via UDS).
